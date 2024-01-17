@@ -19,6 +19,7 @@ let video = document.querySelector('#video-main');
 let playBtn = document.querySelector('#player__start');
 let pauseBtn = document.querySelector('#player__pause');
 let soundBtn = document.querySelector('#player__sound');
+let playerDin = document.querySelectorAll('.player__din span');
 
 playBtn.onclick = play;
 pauseBtn.onclick = pause;
@@ -28,12 +29,17 @@ function play(){
     video.play();
     playBtn.style.zIndex = 1;
     pauseBtn.style.zIndex = 2;
-
+    playerDin.forEach((el) => {
+        el.style.animationPlayState="running"
+    });
 }
 function pause(){
     video.pause();
     playBtn.style.zIndex = 2;
     pauseBtn.style.zIndex = 1;
+    playerDin.forEach((el) => {
+        el.style.animationPlayState="paused"
+    });
 }
 function sound(){
     video.volume = 0.5;
