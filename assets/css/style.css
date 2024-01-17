@@ -74,7 +74,26 @@ h6 {
 }
 
 /* Fonts =======================================*/
-
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Medium.eot');
+	src: local('Raleway Medium'), local('Raleway-Medium'),
+		url('../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Medium.woff') format('woff'),
+		url('../fonts/Raleway-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Bold.eot');
+	src: local('Raleway Bold'), local('Raleway-Bold'),
+		url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Bold.woff') format('woff'),
+		url('../fonts/Raleway-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 @font-face {
     font-family: 'Gilroy';
     src: local('Gilroy Bold'), local('Gilroy-Bold'),
@@ -114,6 +133,7 @@ h6 {
 
 /* Global =====================*/
 .wrapper {
+    font-family: 'Gilroy';
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -219,7 +239,7 @@ main {
 }
 .header__top--text {
     margin-top: 10px;
-    font-family: 'Gilroy';
+    
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -322,6 +342,33 @@ main {
     margin-right: 0;
     animation-duration: 20s;
 }
+
+
+
+.card-item{
+    height: 600px;
+    width: 100%;
+    border-radius: 100px;
+    overflow: hidden;
+}
+.card-item__half{
+    width: 50%;
+    height: 600px;
+}
+.camon20__card--bg{
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.camon20__card--bg img{
+    position: absolute;
+    bottom: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+}
+
 @keyframes play {
     0% {
         width: 30px;

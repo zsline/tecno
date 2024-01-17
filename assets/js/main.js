@@ -42,7 +42,7 @@ function pause(){
     });
 }
 function sound(){
-    video.volume = 0.5;
+    video.volume = 0.4;
     if(video.muted == false){
         video.muted = true;
         soundBtn.style.background = '#585858';
@@ -52,3 +52,4 @@ function sound(){
     }
     
 }
+
