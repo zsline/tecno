@@ -70,6 +70,7 @@ h6 {
     padding: 0;
 }
 :root{
+    --main-color: #0064FE;
     --text-color: #1E1E1E;
     --black: #2E2E2E;
     --white: #fff;
@@ -305,6 +306,7 @@ main {
 
 
 .main-offer {
+    background-color: #000;
     position: relative;
     width: 100%;
     height: 100vh;
@@ -316,12 +318,14 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .main-offer__video video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 60%;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Player ========================= */
@@ -353,11 +357,11 @@ main {
     position: absolute;
 }
 .player__start{
-    z-index: 1;
+    z-index: 2;
     padding-left: 5px;
 }
 .player__stop{
-    z-index: 2;
+    z-index: 1;
 }
 .player__sound{
     background-color: #585858;
@@ -380,6 +384,7 @@ main {
 .player .player__din span:nth-last-child(1){
     margin-right: 0;
     animation-duration: 8s;
+
 }
 .player .player__din span:nth-last-child(2){
     margin-right: 0;
@@ -511,7 +516,7 @@ main {
 .spark10__banner>.banner__half:nth-last-child(1){
     width: 60%;
 }
-#spark10 {
+#spark10img {
     position: absolute;
     height: 90%;
     left: 47%;
@@ -519,6 +524,68 @@ main {
     transform: translate(-50%, -50%);
 }
 
+
+
+
+/* Footer ======================*/
+
+.footer{
+    margin-top: 257px;
+    color: var(--white);
+
+}
+.footer__wrapper{
+    position: relative;
+    background-color: var(--main-color);
+    padding: 100px 48px 24px 148px;
+    border-top-right-radius: 39px;
+    border-top-left-radius: 39px;
+    width: 100%;
+    background-image: url(../img/footer-decor.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+    z-index: 2;
+}
+.footer__logo{
+    position: absolute;
+    top: -96px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.footer__inner{
+    display: flex;
+    justify-content: start;
+}
+.footer__item{
+    margin-right: 84px;
+}
+.footer__item h4{
+    margin-bottom: 24px;
+}
+.footer__item ul li{
+    margin-bottom: 18px;
+}
+.footer__bottom{
+    display: flex;
+    justify-content: end;
+}
+.footer__bottom--inner{
+    display: inline-block;
+}
+.footer__bottom--social ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 252px;
+    margin-bottom: 16px;
+}
+.footer__bottom--copy{
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 152.941%;
+}
 /* Key Frames ======================*/
 @keyframes play {
     0% {
