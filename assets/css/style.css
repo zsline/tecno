@@ -34,9 +34,6 @@ textarea::placeholder {
 
 a {
     display: inline-block;
-}
-
-a:hover {
     color: inherit;
 }
 
@@ -72,7 +69,13 @@ h6 {
     margin: 0;
     padding: 0;
 }
-
+:root{
+    --text-color: #1E1E1E;
+    --black: #2E2E2E;
+    --white: #fff;
+    --bg-color: #F3F3F3; 
+    --accent: #FE006B;
+}
 /* Fonts =======================================*/
 @font-face {
 	font-family: 'Raleway';
@@ -132,14 +135,40 @@ h6 {
 
 
 /* Global =====================*/
-.wrapper {
+body{
     font-family: 'Gilroy';
+    color: var(--text-color);
+    font-size: 18px;
+    background-color: var(--bg-color);
+}
+h2{
+    font-family: 'Raleway';
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+h3{
+    font-family: 'Gilroy';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%
+}
+h4{
+    font-family: 'Gilroy';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%
+}
+.wrapper {
+    
     position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #F3F3F3;
 }
 
 main {
@@ -154,7 +183,21 @@ main {
     padding: 0 10px;
     margin: 0 auto;
 }
-
+.main-btn{
+    padding: 17px 42px;
+    background-color: var(--black);
+    border-radius: 60px;
+    color: var(--white);
+    min-width: 264px;
+    text-align: center;
+}
+.reverse{
+    flex-direction: row-reverse;
+}
+.banner__half{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* Site ========================*/
 
 /* header =============*/
@@ -293,7 +336,7 @@ main {
     margin: 32px auto;
     display: flex;
     align-items: center;
-
+    margin-bottom: 100px;
 }
 .player__btn{
     display: flex;
@@ -344,31 +387,139 @@ main {
 }
 
 
-
-.card-item{
-    height: 600px;
+/* Banner ========================*/
+.banner{
+    position: relative;
     width: 100%;
     border-radius: 100px;
     overflow: hidden;
+    background-color: #fff;
+    margin: 25px 0;
+    display: flex;
 }
-.card-item__half{
+.banner.best{
+    position: relative;
+}
+
+.banner.best::after{
+    position: absolute;
+    content: 'Bestseller';
+    top: 32px;
+    right: 140px;
+    background-color: var(--accent);
+    color: var(--white);
+    font-family: Raleway;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 140%;
+    padding: 4px 10px 3px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+.banner h2{
+    margin-bottom: 32px;
+}
+.banner h4{
+    margin-bottom: 18px;
+}
+.banner p{
+    margin-bottom: 40px;
+}
+.banner__half{
     width: 50%;
-    height: 600px;
 }
-.camon20__card--bg{
+/* Camon 20 =====================*/
+.camon20__banner>.banner__half{
+    padding: 32px 140px 32px 24px;
+}
+.camon20__banner--bg{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
 }
-.camon20__card--bg img{
+.camon20__banner--bg img{
     position: absolute;
-    bottom: -100%;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     height: 80%;
 }
+.camon20__bottom{
+    display: flex;
+    /* gap: 24px; */
+}
+.video-button{
+    position: relative;
+    cursor: pointer;
+    height: 116px;
+    width: calc(100% - 24px);
+    margin-left: 24px;
+    border-radius: 60px;
+    background-image: url(../img/video-btn.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-button:hover{
+    background-image: url(../img/video-btn-h.jpg);
+}
+.video-button__logo{
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.video-button+h4{
+    text-align: center;
+    margin-top: 6px;
+}
+/* Pop 7 ================================*/
+.pop7__banner{
+    margin-top: 148px;
+    margin-bottom: 50px;
+}
+.pop7__banner>.banner__half{
+    padding: 32px 170px 32px 94px;
+}
+.pop7__banner>.banner__half h4{
+    max-width: 547px;
+}
+.pop7__banner--bg{
+    background-size: 100%;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+#pop7img {
+    position: absolute;
+    height: 90%;
+    left: 52%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 
+/* Spark 10 ================================*/
+
+.spark10__banner>.banner__half{
+    padding: 32px 84px 32px 295px;
+    background-position: right center;
+}
+.spark10__banner>.banner__half:nth-last-child(1){
+    width: 60%;
+}
+#spark10 {
+    position: absolute;
+    height: 90%;
+    left: 47%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Key Frames ======================*/
 @keyframes play {
     0% {
         width: 30px;
