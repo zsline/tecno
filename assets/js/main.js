@@ -53,3 +53,10 @@ function sound(){
     
 }
 
+video.addEventListener("ended",function() {
+    playBtn.style.zIndex = 2;
+    pauseBtn.style.zIndex = 1;
+    playerDin.forEach((el) => {
+        el.style.animationPlayState="paused"
+    });
+});
