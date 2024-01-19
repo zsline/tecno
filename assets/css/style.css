@@ -213,6 +213,10 @@ main {
     background-size: cover;
 }
 
+.banner h2{
+    height: 138px;
+}
+
 /* Site ========================*/
 
 /* header =============*/
@@ -570,8 +574,33 @@ main {
     transform: translate(-50%, -50%);
 }
 
-
-
+/* Top New ==================================*/
+.top-new{
+    margin-top: 128px;
+}
+.top-new__title{
+font-size: 64px;
+font-weight: 500;
+margin-bottom: 32px;
+}
+.top-new__banner{
+    height: 650px;
+}
+.top-new__banner--info{
+    width: 40%;
+    padding: 0 174px 0 24px;
+}
+.top-new__banner--bg{
+    position: relative;
+}
+.top-new__banner--bg video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /*================================= Catalog ==================================*/
 
 .prev-link__wrapper {
